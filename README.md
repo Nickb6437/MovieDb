@@ -16,6 +16,15 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
+### Create ENV file with the following variables
+
+```sh
+VITE_MOVIE_DB_KEY='<YOUR_KEY>'
+VITE_API_URL='https://api.themoviedb.org/3/'
+VITE_MOVIE_IMAGE_URL='http://image.tmdb.org/t/p/w300'
+VITE_MOVIE_BACKDROP_URL='http://image.tmdb.org/t/p/original'
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh

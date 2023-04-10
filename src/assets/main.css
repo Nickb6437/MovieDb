@@ -1,35 +1,63 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+:root {
+  --sm: 640px;
+  --md:	768px;
+  --lg:	1024px;
+  --xl:	1280px;
+  --xxl: 1536px;
+  --primary: #3C3E64;
+  --secondary: #6E739A;
+  --tertiary: #90C1E2;
+  --textLight: #f4f4f8;
+  --textDark: #545f66;
+  --text: #121516;
 }
 
-a,
-.green {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  color: var(--text);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  color: inherit;
+}
+a.extLink{
+  color: var(--tertiary);
+}
+a.extLink > svg{
+  font-weight: 600;
+  fill: var(--tertiary);
+  height: 1rem;
+  width: auto;
+}
+a.extLink:hover{
+  color: var(--primary);
+}
+a.extLink:hover > svg{
+  fill: var(--primary);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+.container {
+  padding: 0 1rem;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+@media (min-width: 1280px){
+  .container {
+    max-width:80vw;
   }
 }
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.row {
+  display: flex;
 }
